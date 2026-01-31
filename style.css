@@ -336,3 +336,255 @@ body {
         padding-left: 20px;
     }
 }
+
+/* Testimonials Section */
+.testimonials-section {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-heading {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ff3399;
+    /* Fallback */
+    background: linear-gradient(90deg, #b030d9 0%, #ff0f7b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.testimonial-card {
+    background: linear-gradient(145deg, rgba(30, 17, 36, 0.9) 0%, rgba(16, 6, 18, 0.95) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(217, 37, 212, 0.3);
+    /* Subtle pink border */
+    box-shadow: 0 0 30px rgba(217, 37, 212, 0.15);
+    /* Pink Glow */
+}
+
+/* Green border glow effect from image */
+.testimonial-card.green-theme {
+    border: 1px solid #22c55e !important;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #d925d4;
+}
+
+/* Override Quote Icon color inside green theme if needed, usually keeps pink */
+.testimonial-card.green-theme .quote-icon {
+    color: #e83e8c;
+    /* Or keep pink as per design */
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #d925d4;
+}
+
+.user-name {
+    font-size: 1.1rem;
+}
+
+/* Pagination Dots */
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #d925d4;
+}
+
+/* CTA Section */
+.cta-heading {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.store-btn-lg img {
+    height: 60px;
+    transition: transform 0.2s;
+}
+
+.store-btn-lg:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+    .testimonial-heading {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .cta-heading {
+        font-size: 2rem;
+    }
+
+    .pagination-dots {
+        justify-content: center !important;
+    }
+}
+
+/* Testimonial Stack Effect */
+.testimonial-stack {
+    position: relative;
+    padding: 20px 0;
+}
+
+.faded-card {
+    opacity: 0.4;
+    transform: scale(0.95);
+    filter: blur(1px);
+    pointer-events: none;
+    border: none;
+    /* No border for faded cards */
+}
+
+.focus-card {
+    z-index: 10;
+    transform: scale(1);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.stack-overlay-top,
+.stack-overlay-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100px;
+    /* Fade height */
+    z-index: 20;
+    pointer-events: none;
+}
+
+.stack-overlay-top {
+    top: 0;
+    background: linear-gradient(to bottom, var(--bg-dark), transparent);
+    /* Adjust --bg-dark to match your body bg exactly if needed, usually #100612 */
+    background: linear-gradient(to bottom, #100612 20%, transparent 100%);
+}
+
+.stack-overlay-bottom {
+    bottom: 0;
+    background: linear-gradient(to top, #100612 20%, transparent 100%);
+}
+
+.user-avatar.small {
+    width: 40px;
+    height: 40px;
+}
+
+.small-stars {
+    font-size: 0.8rem;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #0b040d;
+    /* Slightly darker than body */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-links a {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Clean Social Icons (No Circle) */
+.social-icon-clean {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.2s;
+}
+
+.social-icon-clean:hover {
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* Press Section */
+.press-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #d925d4;
+    text-transform: uppercase;
+    position: relative;
+    background-color: var(--bg-dark);
+    /* Match background to hide line behind text */
+    z-index: 2;
+}
+
+.press-heading-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d925d4, transparent);
+    z-index: 1;
+}
+
+.press-card {
+    background-color: var(--card-bg);
+    /* Or match the specific dark card color */
+    border-radius: 20px;
+    border: 1px solid #d925d4;
+    box-shadow: 0 0 15px rgba(217, 37, 212, 0.2);
+}
+
+.press-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 4rem;
+}
+
+.press-logo img {
+    filter: grayscale(100%) brightness(200%);
+    /* Make logos white/light */
+    opacity: 0.8;
+    max-height: 30px;
+    transition: all 0.3s;
+}
+
+.press-logo img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .press-logos-grid {
+        gap: 2rem;
+    }
+
+    .press-heading-container::before {
+        width: 200px;
+    }
+}
