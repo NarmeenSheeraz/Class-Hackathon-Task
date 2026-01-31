@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
 :root {
     --primary-gradient: linear-gradient(90deg, #A734BD 0%, #FF006A 100%);
-    --bg-dark: #050505;
-    --text-color: #ffffff;
-    --text-pink: #FF006A;
     --bg-dark: #100612;
+    --card-bg: #1e1124;
+    --text-white: #ffffff;
     --text-gray: #bda8c4;
     --accent-pink: #d925d4;
     --icon-bg: #2d1e34;
-    --card-bg: #1e1124;
+    --text-pink: #FF006A;
 }
 
 body {
     background-color: var(--bg-dark);
-    color: var(--text-color);
+    color: var(--text-white);
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
@@ -22,38 +23,6 @@ body {
     background-position: top left;
     background-repeat: no-repeat;
     min-height: 100vh;
-}
-.bg-rad-img{
-    background-image: url('img/Dark Gradient bg.png');
-    background-size: 600px;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    /* min-height: 100vh; */
-}
-/* Typography & Utilities */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-}
-
-.gradient-text {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: 800;
-}
-
-.text-pink {
-    color: var(--text-pink);
-}
-
-.text-white-50 {
-    color: rgba(255, 255, 255, 0.6) !important;
 }
 
 /* Navbar */
@@ -67,6 +36,19 @@ h6 {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
     color: #fff !important;
+}
+
+/* Typography & Utilities */
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+.text-pink {
+    color: var(--text-pink);
 }
 
 /* Hero Section */
@@ -110,24 +92,16 @@ h6 {
 }
 
 .decor-left {
-    /* Assuming this is the badge/lightning/fire element */
     top: 15%;
     left: -15%;
     width: 140px;
-    /* Adjust based on actual image size */
 }
 
 .decor-right {
-    /* Assuming this is the heart or other element */
     bottom: 20%;
     right: -10%;
     width: 60px;
-    /* Adjust based on actual image size */
 }
-
-
-
-
 
 @keyframes float {
     0% {
@@ -151,12 +125,10 @@ h6 {
 
 .stats-box {
     background: rgba(167, 52, 189, 0.2);
-    /* Light purple opacity */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    /* Large rounded corners */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -172,11 +144,9 @@ h6 {
     font-weight: 500;
 }
 
-
-
+/* Main Wrapper for Features */
 .main-wrapper {
-    min-height: 100vh;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 /* Heading Styles */
@@ -184,23 +154,11 @@ h6 {
     font-weight: 800;
     font-size: 2.5rem;
     margin-bottom: 0;
-    color: #ff3399;
-    /* Fallback */
-    background: linear-gradient(90deg, #b030d9 0%, #ff0f7b 100%);
+    background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
-}
-
-@media (max-width: 576px) {
-    .main-heading {
-        font-size: 2rem;
-        text-align: center;
-        max-width: 250px;
-        margin: 0 auto;
-        line-height: 1.2;
-    }
+    color: transparent;
 }
 
 /* Content Card */
@@ -245,112 +203,70 @@ h6 {
 
 .icon-private i {
     color: #ffcc00;
-    /* Yellow */
 }
 
 .icon-authentic i {
-    /* Gradient for icon text if supported, else solid */
     background: linear-gradient(135deg, #3b82f6, #ec4899);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     color: #ec4899;
-    /* Fallback */
 }
 
 .icon-transparent i {
     color: #ff3366;
-    /* Pink/Red */
 }
 
 .icon-global i {
     color: #22c55e;
-    /* Green */
 }
 
+/* Why You Need to Get DOWN Section */
+.why-down-section {
+    width: 100%;
+    margin-top: 2rem;
+}
 
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
 
+.section-text {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
 
+.feature-image-wrapper {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.feature-image-wrapper img {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
 
+/* Badges/Tags styling */
+.badge {
+    font-weight: 500;
+    color: var(--text-gray) !important;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Custom Border for Desktop */
+/* Desktop Only Styles */
 @media (min-width: 768px) {
     .border-end-md {
         border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     .col-md-3:not(:last-child) {
         border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
 
-/* Footer Preview */
-.footer-preview h2 {
-    font-size: 2.5rem;
-    background: linear-gradient(90deg, #fff 0%, #ff8caf 100%);
-    /* Subtle gradient variation or just pink */
-    /* If exactly like image which says "What DOWN is All About" in pink/gradient */
-}
-
-.footer-preview .text-pink {
-    /* Override if we want the gradient on the span "DOWN" only? 
-       The user HTML had <h2 class="text-pink">What DOWN...</h2> 
-       If the whole text is pink/gradient: */
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-@media (max-width: 767px) {
-
-    /* 2x2 Grid creates natural bottom borders for top row? 
-       Or we can add borders. 
-       Let's add bottom border to the top two items for mobile consistency if desired.
-    */
-    .col-6:nth-child(1),
-    .col-6:nth-child(2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 24px;
-        margin-bottom: 24px;
-    }
-
-    /* Odd items get right border */
-    .col-6:nth-child(odd) {
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-        padding-right: 20px;
-        /* Adjust spacing to not hug border */
-    }
-
-    .col-6:nth-child(even) {
-        padding-left: 20px;
-    }
-}
-
-
-/* Media Queries for Mobile/Tablet */
+/* Mobile & Tablet Styles */
 @media (max-width: 991.98px) {
     .hero-text-col {
         text-align: center;
@@ -373,9 +289,50 @@ h6 {
 
     .navbar-toggler {
         border: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 1.5rem;
+        text-align: center;
     }
 
-    .navbar-toggler:focus {
-        box-shadow: none;
+    .section-text {
+        text-align: center;
+    }
+
+    .tags-container {
+        text-align: center;
+    }
+
+    .feature-row {
+        margin-bottom: 3rem !important;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+        text-align: center;
+        max-width: 250px;
+        margin: 0 auto;
+        line-height: 1.2;
+    }
+
+    /* 2x2 Grid Borders for Features */
+    .col-6:nth-child(1),
+    .col-6:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+
+    .col-6:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 20px;
+    }
+
+    .col-6:nth-child(even) {
+        padding-left: 20px;
     }
 }
