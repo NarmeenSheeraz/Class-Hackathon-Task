@@ -1,0 +1,169 @@
+ :root {
+     --primary-gradient: linear-gradient(90deg, #A734BD 0%, #FF006A 100%);
+     --bg-dark: #050505;
+     --text-color: #ffffff;
+ }
+
+ body {
+     background-color: var(--bg-dark);
+     color: var(--text-color);
+     font-family: 'Inter', sans-serif;
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+ }
+
+ /* Background Handling */
+ .main-wrapper {
+     background-image: url('img/Dark Gradient bg.png');
+     background-size: cover;
+     background-position: top center;
+     background-repeat: no-repeat;
+     min-height: 100vh;
+ }
+
+ /* Navbar */
+ .navbar-nav .nav-link {
+     color: rgba(255, 255, 255, 0.8) !important;
+     font-size: 0.9rem;
+     font-weight: 500;
+ }
+
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+     color: #fff !important;
+ }
+
+ /* Gradient Text Utility */
+ .gradient-text {
+     background: var(--primary-gradient);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     font-weight: 800;
+ }
+
+ /* Hero Section */
+ .hero-section {
+     padding-top: 2rem;
+ }
+
+ .text-content h1 {
+     font-weight: 800;
+     line-height: 1.1;
+     font-size: 4rem;
+     /* Adjusted for desktop */
+ }
+
+ @media (max-width: 991px) {
+     .text-content h1 {
+         font-size: 3rem;
+     }
+
+     .text-content {
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+
+ /* Phone Container & Floating Elements */
+ .phone-container {
+     position: relative;
+     display: inline-block;
+ }
+
+ .main-phone {
+     max-height: 600px;
+     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+ }
+
+ /* Stats Section */
+ .stats-box {
+     background: rgba(255, 255, 255, 0.05);
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     max-width: 1000px;
+     margin: 0 auto;
+ }
+
+ .stat-number {
+     font-size: 2.5rem;
+     font-weight: 900;
+     margin-bottom: 0.5rem;
+ }
+
+ .stat-label {
+     font-size: 0.9rem;
+     color: rgba(255, 255, 255, 0.7);
+     line-height: 1.4;
+ }
+
+ /* Floating Badges (Custom CSS to match the fun stickers) */
+ .floating-badge {
+     position: absolute;
+     background: #00A3FF;
+     color: white;
+     padding: 5px 10px;
+     border-radius: 4px;
+     font-weight: bold;
+     transform: rotate(-15deg);
+     top: 20%;
+     right: 10%;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .icon-fire {
+     position: absolute;
+     top: 30%;
+     left: 10%;
+     width: 50px;
+     height: 50px;
+     /* Placeholder for the fire icon image if not available, simply styling a circle */
+     background: #FF006A;
+     /* Fallback */
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 0;
+     /* Hide text */
+ }
+
+ /* If we have the images, we should use them. Since I only saw 'insta icon', I'll approximate the stickers or use pseudo-elements if needed. */
+ /* However, for pixel perfection I should check if there are specific sticker assets I missed. 
+   Checking the file list... there was no specific 'fire' or 'heart' icon file listed other than generic ones. 
+   I will style them to look close to the design. */
+
+ .icon-fire::before {
+     content: '🔥';
+     font-size: 24px;
+ }
+
+ .icon-heart {
+     position: absolute;
+     bottom: 25%;
+     right: 5%;
+     width: 60px;
+     height: 60px;
+     background: #FF006A;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 4px 15px rgba(255, 0, 106, 0.4);
+ }
+
+ .icon-heart::before {
+     content: '❤';
+     font-size: 30px;
+     color: white;
+ }
+
+
+ /* Footer Title */
+ .footer-title {
+     font-size: 2.5rem;
+     margin-top: 3rem;
+ }
