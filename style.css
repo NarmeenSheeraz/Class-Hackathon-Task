@@ -3,6 +3,11 @@
     --bg-dark: #050505;
     --text-color: #ffffff;
     --text-pink: #FF006A;
+    --bg-dark: #100612;
+    --text-gray: #bda8c4;
+    --accent-pink: #d925d4;
+    --icon-bg: #2d1e34;
+    --card-bg: #1e1124;
 }
 
 body {
@@ -120,6 +125,10 @@ h6 {
     /* Adjust based on actual image size */
 }
 
+
+
+
+
 @keyframes float {
     0% {
         transform: translateY(0px) rotate(0deg);
@@ -163,9 +172,136 @@ h6 {
     font-weight: 500;
 }
 
+
+
+.main-wrapper {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Heading Styles */
+.main-heading {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    color: #ff3399;
+    /* Fallback */
+    background: linear-gradient(90deg, #b030d9 0%, #ff0f7b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+@media (max-width: 576px) {
+    .main-heading {
+        font-size: 2rem;
+        text-align: center;
+        max-width: 250px;
+        margin: 0 auto;
+        line-height: 1.2;
+    }
+}
+
+/* Content Card */
+.content-card {
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Feature Item Styles */
+.feature-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.feature-text {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Icon Boxes */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: var(--icon-bg);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.icon-private i {
+    color: #ffcc00;
+    /* Yellow */
+}
+
+.icon-authentic i {
+    /* Gradient for icon text if supported, else solid */
+    background: linear-gradient(135deg, #3b82f6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ec4899;
+    /* Fallback */
+}
+
+.icon-transparent i {
+    color: #ff3366;
+    /* Pink/Red */
+}
+
+.icon-global i {
+    color: #22c55e;
+    /* Green */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Custom Border for Desktop */
 @media (min-width: 768px) {
     .border-end-md {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .col-md-3:not(:last-child) {
         border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
@@ -186,6 +322,31 @@ h6 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+@media (max-width: 767px) {
+
+    /* 2x2 Grid creates natural bottom borders for top row? 
+       Or we can add borders. 
+       Let's add bottom border to the top two items for mobile consistency if desired.
+    */
+    .col-6:nth-child(1),
+    .col-6:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+
+    /* Odd items get right border */
+    .col-6:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 20px;
+        /* Adjust spacing to not hug border */
+    }
+
+    .col-6:nth-child(even) {
+        padding-left: 20px;
+    }
 }
 
 
