@@ -1,169 +1,220 @@
- :root {
-     --primary-gradient: linear-gradient(90deg, #A734BD 0%, #FF006A 100%);
-     --bg-dark: #050505;
-     --text-color: #ffffff;
- }
+:root {
+    --primary-gradient: linear-gradient(90deg, #A734BD 0%, #FF006A 100%);
+    --bg-dark: #050505;
+    --text-color: #ffffff;
+    --text-pink: #FF006A;
+}
 
- body {
-     background-color: var(--bg-dark);
-     color: var(--text-color);
-     font-family: 'Inter', sans-serif;
-     margin: 0;
-     padding: 0;
-     overflow-x: hidden;
- }
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('img/Dark Gradient bg.png');
+    background-size: 600px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.bg-rad-img{
+    background-image: url('img/Dark Gradient bg.png');
+    background-size: 600px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    /* min-height: 100vh; */
+}
+/* Typography & Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
 
- /* Background Handling */
- .main-wrapper {
-     background-image: url('img/Dark Gradient bg.png');
-     background-size: cover;
-     background-position: top center;
-     background-repeat: no-repeat;
-     min-height: 100vh;
- }
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
 
- /* Navbar */
- .navbar-nav .nav-link {
-     color: rgba(255, 255, 255, 0.8) !important;
-     font-size: 0.9rem;
-     font-weight: 500;
- }
+.text-pink {
+    color: var(--text-pink);
+}
 
- .navbar-nav .nav-link:hover,
- .navbar-nav .nav-link.active {
-     color: #fff !important;
- }
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
 
- /* Gradient Text Utility */
- .gradient-text {
-     background: var(--primary-gradient);
-     -webkit-background-clip: text;
-     background-clip: text;
-     color: transparent;
-     font-weight: 800;
- }
+/* Navbar */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
- /* Hero Section */
- .hero-section {
-     padding-top: 2rem;
- }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #fff !important;
+}
 
- .text-content h1 {
-     font-weight: 800;
-     line-height: 1.1;
-     font-size: 4rem;
-     /* Adjusted for desktop */
- }
+/* Hero Section */
+.hero-section {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
 
- @media (max-width: 991px) {
-     .text-content h1 {
-         font-size: 3rem;
-     }
+.hero-text-col h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
 
-     .text-content {
-         text-align: center;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-     }
- }
+.store-btn {
+    height: 48px;
+    transition: transform 0.2s;
+}
 
- /* Phone Container & Floating Elements */
- .phone-container {
-     position: relative;
-     display: inline-block;
- }
+.store-btn:hover {
+    transform: translateY(-2px);
+}
 
- .main-phone {
-     max-height: 600px;
-     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
- }
+/* Phone & Decor */
+.phone-container {
+    position: relative;
+    z-index: 10;
+}
 
- /* Stats Section */
- .stats-box {
-     background: rgba(255, 255, 255, 0.05);
-     backdrop-filter: blur(10px);
-     border: 1px solid rgba(255, 255, 255, 0.1);
-     max-width: 1000px;
-     margin: 0 auto;
- }
+.hero-phone {
+    max-height: 550px;
+    width: auto;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+    position: relative;
+    z-index: 2;
+}
 
- .stat-number {
-     font-size: 2.5rem;
-     font-weight: 900;
-     margin-bottom: 0.5rem;
- }
+.decor-icon {
+    position: absolute;
+    z-index: 3;
+    animation: float 6s ease-in-out infinite;
+}
 
- .stat-label {
-     font-size: 0.9rem;
-     color: rgba(255, 255, 255, 0.7);
-     line-height: 1.4;
- }
+.decor-left {
+    /* Assuming this is the badge/lightning/fire element */
+    top: 15%;
+    left: -15%;
+    width: 140px;
+    /* Adjust based on actual image size */
+}
 
- /* Floating Badges (Custom CSS to match the fun stickers) */
- .floating-badge {
-     position: absolute;
-     background: #00A3FF;
-     color: white;
-     padding: 5px 10px;
-     border-radius: 4px;
-     font-weight: bold;
-     transform: rotate(-15deg);
-     top: 20%;
-     right: 10%;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
- }
+.decor-right {
+    /* Assuming this is the heart or other element */
+    bottom: 20%;
+    right: -10%;
+    width: 60px;
+    /* Adjust based on actual image size */
+}
 
- .icon-fire {
-     position: absolute;
-     top: 30%;
-     left: 10%;
-     width: 50px;
-     height: 50px;
-     /* Placeholder for the fire icon image if not available, simply styling a circle */
-     background: #FF006A;
-     /* Fallback */
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 0;
-     /* Hide text */
- }
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
 
- /* If we have the images, we should use them. Since I only saw 'insta icon', I'll approximate the stickers or use pseudo-elements if needed. */
- /* However, for pixel perfection I should check if there are specific sticker assets I missed. 
-   Checking the file list... there was no specific 'fire' or 'heart' icon file listed other than generic ones. 
-   I will style them to look close to the design. */
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
 
- .icon-fire::before {
-     content: '🔥';
-     font-size: 24px;
- }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
 
- .icon-heart {
-     position: absolute;
-     bottom: 25%;
-     right: 5%;
-     width: 60px;
-     height: 60px;
-     background: #FF006A;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 4px 15px rgba(255, 0, 106, 0.4);
- }
+/* Stats Section */
+.stats-section {
+    position: relative;
+    z-index: 2;
+}
 
- .icon-heart::before {
-     content: '❤';
-     font-size: 30px;
-     color: white;
- }
+.stats-box {
+    background: rgba(167, 52, 189, 0.2);
+    /* Light purple opacity */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    /* Large rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stats-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats-box p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* Custom Border for Desktop */
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Footer Preview */
+.footer-preview h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #fff 0%, #ff8caf 100%);
+    /* Subtle gradient variation or just pink */
+    /* If exactly like image which says "What DOWN is All About" in pink/gradient */
+}
+
+.footer-preview .text-pink {
+    /* Override if we want the gradient on the span "DOWN" only? 
+       The user HTML had <h2 class="text-pink">What DOWN...</h2> 
+       If the whole text is pink/gradient: */
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
 
- /* Footer Title */
- .footer-title {
-     font-size: 2.5rem;
-     margin-top: 3rem;
- }
+/* Media Queries for Mobile/Tablet */
+@media (max-width: 991.98px) {
+    .hero-text-col {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .hero-text-col h1 {
+        font-size: 2.8rem;
+    }
+
+    .decor-left {
+        left: -5%;
+        width: 100px;
+    }
+
+    .decor-right {
+        right: -5%;
+        width: 50px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+}
