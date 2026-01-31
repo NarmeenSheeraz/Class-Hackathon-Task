@@ -1,0 +1,248 @@
+/* Body & Core */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    background-color: #0b0213;
+    /* Deep dark purple/black */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography & Utils */
+.text-light-50 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.text-pink {
+    color: #e63e90;
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff !important;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    opacity: 1;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, #d338e5 0%, #ff4d80 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Contact Card */
+.contact-card {
+    background-color: #170b22;
+    /* Slightly lighter dark purple */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    margin-top: 30px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+/* Image Section */
+.image-wrapper {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper::before {
+    /* The square border frame behind phones */
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #3b2850;
+    border-radius: 4px;
+    z-index: 0;
+    transform: rotate(0deg);
+}
+
+.floating-phones {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+
+/* Form Styles */
+.custom-input {
+    background-color: #241630;
+    /* Dark input background */
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 15px;
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-input:focus {
+    background-color: #241630;
+    border: 1px solid #d338e5;
+    color: #fff;
+    box-shadow: none;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+/* Checkbox specific */
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0;
+    border-color: #ccc;
+}
+
+.form-check-label {
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Submit Button */
+.btn-gradient {
+    background: linear-gradient(90deg, #d338e5 0%, #ff4d80 100%);
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 12px 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(211, 56, 229, 0.4);
+    color: #fff;
+}
+
+/* Press Page Styles */
+
+/* Header Glow */
+.press-glow {
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(213, 51, 255, 0.15) 0%, rgba(11, 2, 19, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Press Cards */
+.press-card {
+    background-color: #150921;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.press-card:hover {
+    border-color: rgba(213, 51, 255, 0.5);
+    background-color: #1e0d2e;
+}
+
+/* Active Press Card */
+.press-card.active {
+    background: linear-gradient(90deg, #d338e5 0%, #ff4d80 100%);
+    border: none;
+    box-shadow: 0 10px 30px rgba(211, 56, 229, 0.3);
+}
+
+.press-card.active .versus-logo-placeholder {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Versus Logo Placeholder */
+.versus-logo-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #0b0213;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* Footer (Existing + Tweaks) */
+.footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    border-top: none;
+}
+
+.footer h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+.footer a.text-light-50:hover {
+    color: #fff !important;
+}
