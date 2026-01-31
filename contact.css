@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #5c1b4e, #000);
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+}
+
+.nav-link {
+    color: #ddd;
+}
+
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* color: transparent; */
+    font-weight: 800;
+}
+
+.nav-link.active {
+    color: #ff3da5;
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 90vh;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* Title */
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff3da5;
+}
+
+/* Phone Image Box */
+.phone-box {
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* Inputs */
+.custom-input {
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: #fff;
+}
+
+.custom-input:focus {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Button */
+.submit-btn {
+    background: linear-gradient(90deg, #ff3da5, #ff7ad9);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    border-top: none;
+}
+
+.footer h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+.footer a.text-light-50:hover {
+    color: #fff !important;
+}
